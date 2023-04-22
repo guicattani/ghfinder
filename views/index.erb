@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import * as Turbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
+    <style>
+      .turbo-progress-bar {
+        height: 10px;
+        background-color: violet;
+      }
+    </style>
+    <title>GitHub Search</title>
+  </head>
+  <body>
+    <header>
+      <div class="h-14 bg-gradient-to-r from-violet-800 to-fuchsia-900"></div>
+      <div class="mx-auto px-3 py-6 bg-gradient-to-r from-violet-700 to-fuchsia-800 flex flex-col items-center ">
+        <img class="h-56 w-56" src="/assets/github.svg" alt="Github Search" loading="lazy" style="width: 50%; margin: 0 auto;"/>
+        <div class="relative h-10 w-full min-w-[200px] max-w-[24rem]">
+          <form action="/repos" method="repos">
+            <input class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-purple-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 caret-pink-500" 
+            placeholder=" "
+            name="search" id="search"
+            />
+            <button class="!absolute right-1 top-1 z-10 select-none rounded bg-purple-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-purple-500/20 transition-all hover:shadow-lg hover:shadow-purple-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none cursor-pointer"
+            style="margin: 0 auto;"
+            type="submit"
+            data-ripple-light="true">
+              Search
+            </button>
+          </form>
+        </div>
+      </header>
+      <main class='flex flex-col v-screen ' style="background-color: rgb(222 222 255);">
+        <ul id="repos-list">
+        </ul>
+      </main>
+      <footer>
+        <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
+          © 2023 No-Copyright!
+        </div>
+      </footer>
+    </body>
+  </html>
