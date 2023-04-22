@@ -1,0 +1,43 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.8.1)
+    ffi (1.15.5)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    mini_mime (1.1.2)
+    multi_xml (0.6.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.9)
+    puma (6.2.2)
+      nio4r (~> 2.0)
+    rack (2.2.6.4)
+    rack-protection (3.0.6)
+      rack
+    ruby2_keywords (0.0.5)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sinatra (3.0.6)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.6)
+      tilt (~> 2.0)
+    tilt (2.1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  dotenv (~> 2.8.1)
+  httparty (~> 0.21.0)
+  puma (~> 6.2.2)
+  sassc (~> 2.4)
+  sinatra (~> 3.0.6)
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.10
