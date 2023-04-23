@@ -13,9 +13,8 @@
               <div class="flex flex-col items-center gap-x-8 rounded-md bg-slate-300 p-3 md:flex-row">
                 <div class="shrink-0"><img class="h-36 w-36" src="<%= repo['owner']['avatar_url'] %>" alt="<%= repo['owner']['login'] %>" loading="lazy"/></div>
                 <div>
-                  <div class="flex flex-col items-center gap-y-2 md:flex-row"><a class="hover:text-cyan-400" href="/">
-                      <a class="text-xl font-semibold" href='<%= repo['html_url'] %>'><%= repo['full_name'] %></a>
-                    </a>
+                  <div class="flex flex-col items-center gap-y-2 md:flex-row">
+                    <a class="text-xl font-semibold hover:text-purple-400" href='<%= repo['html_url'] %>'><%= repo['full_name'] %></a>
                     <div class="ml-3 flex gap-2">
                       <% if repo["license"] %>
                         <% 
