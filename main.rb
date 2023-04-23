@@ -12,6 +12,9 @@ end
 
 get '/repos' do
   response.headers['Content-Type'] = 'text/vnd.turbo-stream.html; charset=utf-8'
-  @repos = GitHub.get_response(params[:search])
+  @repos = GitHub.get_response(params[:search], logger)
   erb :repos
+rescue StandardError => e
+  logger.error "Error handling request: #{e}"
+  erb :error
 end

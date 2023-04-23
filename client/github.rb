@@ -14,11 +14,12 @@ module GitHub
       license
     ].freeze
 
-  def self.get_response(query)
+  def self.get_response(query, logger)
     response = HTTParty.get(ENV['GITHUB_SEARCH_URL'] + "?q=#{query}", headers:)
     case response.code
     when 400...600
-      return [] # do better error handling here
+      logger.error("#{response.code} Error handling request: #{response}")
+      return []
     end
 
     sliced_response(response)
